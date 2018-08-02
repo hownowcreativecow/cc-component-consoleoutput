@@ -1,0 +1,53 @@
+{
+    "name": "creativecow/cc-component-consoleoutput",
+    "description": "Symfony console output as HTML using SensioLabs AnsiConverter",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "ansi",
+        "html",
+        "symfony-console",
+        "console-to-browser"
+    ],
+    "homepage": "https://github.com/hownowcreativecow/cc-component-consoleoutput",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "classmap-authoritative": true,
+        "discard-changes": true,
+        "optimize-autoloader": true,
+        "prepend-autoloader": true,
+        "process-timeout": 5000,
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.1.0",
+        "sensiolabs/ansi-to-html": "^1.1.3",
+        "symfony/console": "^4.1",
+        "zendframework/zend-config-aggregator": "^1.1.1",
+        "zendframework/zend-servicemanager": "^3.3.2"
+    },
+    "require-dev": {
+        "ise/php-metapackage-development": "^2.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cc\\Stream\\": "src/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@analyze"
+        ],
+        "analyze": "phpstan analyze -l max src",
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.1.x-dev"
+        }
+    }
+}
