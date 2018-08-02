@@ -36,7 +36,7 @@ class StreamedOutput extends StreamOutput
     /**
      * @inheritdoc
      */
-    protected function doWrite($message, $newline)
+    protected function doWrite($message, $newline): void
     {
         $message = trim($message, "\x08 ");
         if ($message) {

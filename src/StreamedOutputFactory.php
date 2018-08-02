@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 namespace Cc\ConsoleOutput;
 
-use Cc\Stream\SharedSocket;
+use Cc\OutputStream\SharedSocket;
 use Interop\Container\ContainerInterface;
 use SensioLabs\AnsiConverter\AnsiToHtmlConverter;
 use Zend\ServiceManager\Factory\FactoryInterface;

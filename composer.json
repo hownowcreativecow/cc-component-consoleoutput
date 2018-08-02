@@ -22,8 +22,9 @@
     },
     "require": {
         "php": "^7.1.0",
+        "creativecow/cc-component-outputstream": "^1.0.1",
         "sensiolabs/ansi-to-html": "^1.1.3",
-        "symfony/console": "^4.1",
+        "symfony/console": "^4.1.3",
         "zendframework/zend-config-aggregator": "^1.1.1",
         "zendframework/zend-servicemanager": "^3.3.2"
     },
@@ -32,15 +33,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Cc\\Stream\\": "src/"
+            "Cc\\ConsoleOutput\\": "src/"
         }
     },
     "scripts": {
         "check": [
             "@cs-check",
-            "@analyze"
+            "@analyse"
         ],
-        "analyze": "phpstan analyze -l max src",
+        "analyse": "phpstan analyze -l max src",
         "cs-check": "phpcs",
         "cs-fix": "phpcbf"
     },
